@@ -5,14 +5,7 @@ import {
 import './Services.css';
 
 const services = [
-  {
-    icon: <User className="service-icon" />,
-    title: "1-on-1 Nutrition Coaching",
-    description: "Personalized guidance and support tailored to your unique health goals with continuous monitoring.",
-    cta: "Book Consultation",
-    link: "#contact",
-    gradient: "from-emerald-400 to-teal-500"
-  },
+  
   {
     icon: <BarChart2 className="service-icon" />,
     title: "Weight Management",
@@ -44,14 +37,22 @@ const services = [
     cta: "Learn More",
     link: "#corporate",
     gradient: "from-purple-400 to-violet-500"
-  }
+  },
+  {
+    icon: <User className="service-icon" />,
+    title: "1-on-1 Nutrition Coaching",
+    description: "Personalized guidance and support tailored to your unique health goals with continuous monitoring.",
+    cta: "Book Consultation",
+    link: "#contact",
+    gradient: "from-emerald-400 to-teal-500"
+  },
 ];
 
 export default function Services() {
   const [modalOpen, setModalOpen] = useState(false);
   const [hoveredCard, setHoveredCard] = useState(null);
 
-  const previewServices = services.slice(0, 4);
+  const previewServices = services.slice(0, 3);
 
   return (
     <section className="services-section" id="services">
