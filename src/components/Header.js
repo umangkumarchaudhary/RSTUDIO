@@ -71,10 +71,6 @@ const Header = () => {
                 <span className="brand-text">Revitalize Studio</span>
                 <div className="brand-shimmer"></div>
               </div>
-              <div className="brand-tagline">
-                <Sparkles className="tagline-icon" />
-                Transform Your Health Journey
-              </div>
               <div className="expertise-badges">
                 <span className="badge">Certified Nutritionist</span>
               </div>
