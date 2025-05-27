@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, MessageCircle, Phone, Leaf, Heart, Zap, Apple, Star, Sparkles } from 'lucide-react';
+import { Menu, X, MessageCircle, Phone, Leaf, Heart, Zap, Apple, Star} from 'lucide-react';
 import './Header.css';
 import logo from '../assets/logo.jpg';
 
