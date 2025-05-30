@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import {
   User, BarChart2, HeartPulse, ClipboardList, Briefcase, PlusCircle, X
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './Services.css';
 
 const services = [
-  
   {
     icon: <BarChart2 className="service-icon" />,
     title: "Weight Management",
     description: "Sustainable strategies for healthy weight transformation with ongoing motivation and progress tracking.",
     cta: "Start Journey",
-    link: "#weight",
+    link: "/weight-management",
     gradient: "from-blue-400 to-indigo-500"
   },
   {
@@ -19,7 +19,7 @@ const services = [
     title: "Diabetes Nutrition",
     description: "Expert advice and specialized meal planning for managing diabetes and improving overall wellbeing.",
     cta: "Get Support",
-    link: "#diabetes",
+    link: "/diabetes-nutrition",
     gradient: "from-red-400 to-pink-500"
   },
   {
@@ -27,7 +27,7 @@ const services = [
     title: "Personalized Diet Plans",
     description: "Custom meal plans designed for your lifestyle, preferences, and specific health requirements.",
     cta: "Create Plan",
-    link: "#plans",
+    link: "/personalized-diet-plans",
     gradient: "from-orange-400 to-amber-500"
   },
   {
@@ -35,7 +35,7 @@ const services = [
     title: "Corporate Wellness",
     description: "Workplace nutrition workshops and comprehensive programs to boost employee health and productivity.",
     cta: "Learn More",
-    link: "#corporate",
+    link: "/corporate-wellness",
     gradient: "from-purple-400 to-violet-500"
   },
   {
@@ -43,7 +43,7 @@ const services = [
     title: "1-on-1 Nutrition Coaching",
     description: "Personalized guidance and support tailored to your unique health goals with continuous monitoring.",
     cta: "Book Consultation",
-    link: "#contact",
+    link: "/nutrition-coaching",
     gradient: "from-emerald-400 to-teal-500"
   },
 ];
@@ -52,7 +52,7 @@ export default function Services() {
   const [modalOpen, setModalOpen] = useState(false);
   const [hoveredCard, setHoveredCard] = useState(null);
 
-  const previewServices = services.slice(0, 3);
+  const previewServices = services.slice(0, 4);
 
   return (
     <section className="services-section" id="services">
@@ -92,10 +92,10 @@ export default function Services() {
               <div className="service-content">
                 <h3 className="service-title">{service.title}</h3>
                 <p className="service-description">{service.description}</p>
-                <a href={service.link} className="service-cta">
+                <Link to={service.link} className="service-cta">
                   <span>{service.cta}</span>
                   <div className="cta-arrow">→</div>
-                </a>
+                </Link>
               </div>
               <div className="card-pattern"></div>
             </div>
@@ -153,10 +153,10 @@ export default function Services() {
                     <div className="service-content">
                       <h3 className="service-title">{service.title}</h3>
                       <p className="service-description">{service.description}</p>
-                      <a href={service.link} className="service-cta">
+                      <Link to={service.link} className="service-cta">
                         <span>{service.cta}</span>
                         <div className="cta-arrow">→</div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 ))}

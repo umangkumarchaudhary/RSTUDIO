@@ -293,12 +293,13 @@ body {
 .desktop-nav {
   display: none;
   position: relative;
+  
 }
 
 .nav-pills {
   display: flex;
   gap: 0.25rem;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(98, 209, 185, 0.9);
   padding: 0.5rem;
   border-radius: 50px;
   backdrop-filter: blur(20px);
